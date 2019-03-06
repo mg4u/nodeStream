@@ -1,0 +1,18 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style type="text/css">
+ 
+</style>
+<% include menu.ejs %>
+<div class="well">
+	<h1><%=name%></h1>
+	<div class="col-sm-3 col-sm-offset-4">
+	    your are in <b><%=name%></b> profile
+	    <% if(age) {%>
+	    and he is <%= age%> years old
+	    <% }%>
+	</div>
+	<form method="post" action="/profile">
+		<input class="form-control" name="newName" />
+		<button>send</button>
+	</form>
+</div>
